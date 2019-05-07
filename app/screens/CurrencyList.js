@@ -4,7 +4,7 @@ import {
   FlatList, StatusBar, View,
 } from 'react-native';
 
-import { ListItem, Separator } from '../components/List';
+import { ListItem, Separator } from '../Components/List';
 import currencies from '../data/currencies';
 
 const TEMP_CURRENT_CURRENCY = 'CAD';

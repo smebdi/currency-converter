@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { ScrollView, StatusBar } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-import { ListItem, Separator } from '../components/List';
+import { ListItem, Separator } from '../Components/List';
 
 const styles = EStyleSheet.create({
   $blue: '$primaryBlue',

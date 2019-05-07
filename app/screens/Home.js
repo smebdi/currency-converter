@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { StatusBar, KeyboardAvoidingView } from 'react-native';
 
-import { Container } from '../components/Container';
-import { Logo } from '../components/Logo';
-import { InputWithButton } from '../components/TextInput';
-import { ClearButton } from '../components/Button';
-import { LastConverted } from '../components/Text';
-import { Header } from '../components/Header';
+import { Container } from '../Components/Container';
+import { Logo } from '../Components/Logo';
+import { InputWithButton } from '../Components/TextInput';
+import { ClearButton } from '../Components/Button';
+import { LastConverted } from '../Components/Text';
+import { Header } from '../Components/Header';
 
 const TEMP_BASE_CURRENCY = 'USD';
 const TEMP_QUOTE_CURRENCY = 'GBP';
