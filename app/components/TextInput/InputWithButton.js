@@ -11,6 +11,7 @@ const InputWithButton = ({
   editable,
   onPress,
   buttonText,
+  textColor,
   ...props
 }) => {
   const underlayColor = color(styles.$buttonBackgroundColorBase).darken(
@@ -23,7 +24,9 @@ const InputWithButton = ({
   }
 
   const buttonTextStyles = [styles.buttonText];
-  if (props.textColor) buttonTextStyles.push({ color: props.textColor })
+  if (textColor) {
+    buttonTextStyles.push({ color: props.textColor });
+  }
 
   return (
     <View style={containerStyles}>
@@ -44,6 +47,7 @@ InputWithButton.propTypes = {
   onPress: PropTypes.func,
   buttonText: PropTypes.string,
   editable: PropTypes.bool,
+  textColor: PropTypes.string,
 };
 
 export default InputWithButton;

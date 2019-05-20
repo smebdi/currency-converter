@@ -3,10 +3,9 @@ import React, { Component } from 'react';
 import { FlatList, StatusBar, View } from 'react-native';
 import { connect } from 'react-redux';
 
-import { changeBaseCurrency, changeQuoteCurrency } from '../actions/currencies';
-
 import { ListItem, Separator } from '../components/List';
 import currencies from '../data/currencies';
+import { changeBaseCurrency, changeQuoteCurrency } from '../actions/currencies';
 
 class CurrencyList extends Component {
   static propTypes = {
@@ -17,22 +16,25 @@ class CurrencyList extends Component {
     primaryColor: PropTypes.string,
   };
 
-  handlePress = currency => {
-    const { navigation } = this.props;
-    const { type } = this.props.navigation.state.params;
-    if (type == 'base') {
-      this.props.dispatch(changeBaseCurrency(currency))
-    } else if (type == 'quote') {
-      this.props.dispatch(changeQuoteCurrency(currency))
+  handlePress = (currency) => {
+    const { navigation, dispatch } = this.props;
+    const { type } = navigation.state.params;
+    if (type === 'base') {
+      dispatch(changeBaseCurrency(currency));
+    } else if (type === 'quote') {
+      dispatch(changeQuoteCurrency(currency));
     }
 
     navigation.goBack(null);
   };
 
   render() {
-    let comparisonCurrency= this.props.baseCurrency;
-    if (this.props.navigation.state.params.type == "quote") {
-      comparisonCurrency = this.props.quoteCurrency;
+    const {
+      baseCurrency, quoteCurrency, navigation, primaryColor,
+    } = this.props;
+    let comparisonCurrency = baseCurrency;
+    if (navigation.state.params.type === 'quote') {
+      comparisonCurrency = quoteCurrency;
     }
 
     return (
@@ -45,7 +47,7 @@ class CurrencyList extends Component {
               text={item}
               selected={item === comparisonCurrency}
               onPress={() => this.handlePress(item)}
-              iconBackground={this.props.primaryColor}
+              iconBackground={primaryColor}
             />
           )}
           keyExtractor={item => item}
@@ -56,12 +58,10 @@ class CurrencyList extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    baseCurrency: state.currencies.baseCurrency,
-    quoteCurrency: state.currencies.quoteCurrency,
-    primaryColor: state.theme.primaryColor
-  }
-}
+const mapStateToProps = state => ({
+  baseCurrency: state.currencies.baseCurrency,
+  quoteCurrency: state.currencies.quoteCurrency,
+  primaryColor: state.theme.primaryColor,
+});
 
 export default connect(mapStateToProps)(CurrencyList);

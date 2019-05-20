@@ -21,8 +21,8 @@ class Themes extends Component {
   };
 
   handlePressTheme = (color) => {
-    const { navigation } = this.props;
-    this.props.dispatch(changePrimaryColor(color));
+    const { navigation, dispatch } = this.props;
+    dispatch(changePrimaryColor(color));
     navigation.goBack();
   };
 
@@ -66,7 +66,4 @@ class Themes extends Component {
     );
   }
 }
-
-
-
 export default connect()(Themes);
