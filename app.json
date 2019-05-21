@@ -1,5 +1,7 @@
 {
   "expo": {
-    "sdkVersion": "31.0.0"
+    "sdkVersion": "31.0.0",
+    "orientation": "portrait",
+    "privacy": "public"
   }
 }

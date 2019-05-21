@@ -1,24 +1,17 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  View, Text, Keyboard, Animated, Platform, StyleSheet,
-} from 'react-native';
+import { View, Text, Keyboard, Animated, Platform, StyleSheet } from 'react-native';
 
-import styles from './styles';
+import styles, { imageSizes } from './styles';
 
 const ANIMATION_DURATION = 250;
 
 class Logo extends Component {
-  static propTypes = {
-    tintColor: PropTypes.string,
-  };
-
   constructor(props) {
     super(props);
 
     this.state = {
-      containerImageWidth: new Animated.Value(styles.$largeContainerSize),
-      imageWidth: new Animated.Value(styles.$largeImageSize),
+      containerImageWidth: new Animated.Value(imageSizes.$largeContainerSize),
+      imageWidth: new Animated.Value(imageSizes.$largeImageSize),
     };
   }
 
@@ -40,47 +33,40 @@ class Logo extends Component {
   }
 
   keyboardWillShow = () => {
-    const { containerImageWidth, imageWidth } = this.state;
-
     Animated.parallel([
-      Animated.timing(containerImageWidth, {
-        toValue: styles.$smallContainerSize,
+      Animated.timing(this.state.containerImageWidth, {
+        toValue: imageSizes.$smallContainerSize,
         duration: ANIMATION_DURATION,
       }),
-      Animated.timing(imageWidth, {
-        toValue: styles.$smallImageSize,
+      Animated.timing(this.state.imageWidth, {
+        toValue: imageSizes.$smallImageSize,
         duration: ANIMATION_DURATION,
       }),
     ]).start();
   };
 
   keyboardWillHide = () => {
-    const { containerImageWidth, imageWidth } = this.state;
-
     Animated.parallel([
-      Animated.timing(containerImageWidth, {
-        toValue: styles.$largeContainerSize,
+      Animated.timing(this.state.containerImageWidth, {
+        toValue: imageSizes.$largeContainerSize,
         duration: ANIMATION_DURATION,
       }),
-      Animated.timing(imageWidth, {
-        toValue: styles.$largeImageSize,
+      Animated.timing(this.state.imageWidth, {
+        toValue: imageSizes.$largeImageSize,
         duration: ANIMATION_DURATION,
       }),
     ]).start();
   };
 
   render() {
-    const { containerImageWidth, imageWidth } = this.state;
-    const { tintColor } = this.props;
-
     const containerImageStyles = [
       styles.containerImage,
-      { width: containerImageWidth, height: containerImageWidth },
+      { width: this.state.containerImageWidth, height: this.state.containerImageWidth },
     ];
     const imageStyles = [
       styles.logo,
-      { width: imageWidth },
-      tintColor ? { tintColor } : null,
+      { width: this.state.imageWidth },
+      this.props.tintColor ? { tintColor: this.props.tintColor } : null,
     ];
 
     return (

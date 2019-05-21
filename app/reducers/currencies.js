@@ -56,14 +56,10 @@ export default (state = initialState, action) => {
         conversions: setConversions(state, action),
       };
     case GET_INITIAL_CONVERSION:
-      return {
-        ...state,
-        conversions: setConversions(state, { currency: state.baseCurrency }),
-      };
+      return { ...state, conversions: setConversions(state, { currency: state.baseCurrency }) };
     case CONVERSION_RESULT:
       return {
         ...state,
-        baseCurrency: action.result.base,
         conversions: {
           ...state.conversions,
           [action.result.base]: {
@@ -73,10 +69,7 @@ export default (state = initialState, action) => {
         },
       };
     case CONVERSION_ERROR:
-      return {
-        ...state,
-        error: action.error,
-      };
+      return { ...state, error: action.error };
     default:
       return state;
   }

@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { StatusBar, KeyboardAvoidingView } from 'react-native';
+import { StatusBar, KeyboardAvoidingView, NetInfo } from 'react-native';
 import { connect } from 'react-redux';
 
 import { Container } from '../components/Container';
@@ -9,102 +8,89 @@ import { InputWithButton } from '../components/TextInput';
 import { ClearButton } from '../components/Button';
 import { LastConverted } from '../components/Text';
 import { Header } from '../components/Header';
-import { connectAlert } from '../components/Alert';
+import { AlertConsumer } from '../components/Alert';
 
-import { changeCurrencyAmount, swapCurrency, getInitialConverstion } from '../actions/currencies';
+import { changeCurrencyAmount, swapCurrency, getInitialConversion } from '../actions/currencies';
+import { changeNetworkStatus } from '../actions/network';
 
 class Home extends Component {
-  static propTypes = {
-    navigation: PropTypes.object,
-    dispatch: PropTypes.func,
-    baseCurrency: PropTypes.string,
-    quoteCurrency: PropTypes.string,
-    amount: PropTypes.number,
-    conversionRate: PropTypes.number,
-    lastConvertedDate: PropTypes.object,
-    isFetching: PropTypes.bool,
-    primaryColor: PropTypes.string,
-    alertWithType: PropTypes.func,
-    currencyError: PropTypes.string,
-  };
+  constructor(props) {
+    super(props);
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.currencyError && nextProps.currencyError !== this.props.currencyError) {
-      this.props.alertWithType('error', 'Error', nextProps.currencyError);
+    this.props.dispatch(getInitialConversion());
+  }
+
+  componentDidUpdate() {
+    if (this.props.currencyError) {
+      this.props.alertWithType('error', 'Error', this.props.currencyError);
     }
   }
 
-  componentWillMount() {
-    this.props.dispatch(getInitialConverstion());
+  componentDidMount() {
+    NetInfo.addEventListener('connectionChange', this.handleNetworkChange);
+  }
+
+  componentWillUnmount() {
+    NetInfo.removeEventListener('connectionChange', this.handleNetworkChange);
+  }
+
+  handleNetworkChange = (info) => {
+    console.log(info)
+    this.props.dispatch(changeNetworkStatus(info.type))
   }
 
   handleChangeText = (text) => {
-    const { dispatch } = this.props;
-    dispatch(changeCurrencyAmount(text));
+    this.props.dispatch(changeCurrencyAmount(text));
   };
 
   handlePressBaseCurrency = () => {
-    const { navigation } = this.props;
-    navigation.navigate('CurrencyList', { title: 'Base Currency', type: 'base' });
+    this.props.navigation.navigate('CurrencyList', { title: 'Base Currency', type: 'base' });
   };
 
   handlePressQuoteCurrency = () => {
-    const { navigation } = this.props;
-    navigation.navigate('CurrencyList', { title: 'Quote Currency', type: 'quote' });
+    this.props.navigation.navigate('CurrencyList', { title: 'Quote Currency', type: 'quote' });
   };
 
   handleSwapCurrency = () => {
-    const { dispatch } = this.props;
-    dispatch(swapCurrency());
+    this.props.dispatch(swapCurrency());
   };
 
   handleOptionsPress = () => {
-    const { navigation } = this.props;
-    navigation.navigate('Options');
+    this.props.navigation.navigate('Options');
   };
 
   render() {
-    const {
-      isFetching,
-      amount,
-      conversionRate,
-      baseCurrency,
-      quoteCurrency,
-      lastConvertedDate,
-      primaryColor,
-    } = this.props;
-
     let quotePrice = '...';
-    if (!isFetching) {
-      quotePrice = (amount * conversionRate).toFixed(2);
+    if (!this.props.isFetching) {
+      quotePrice = (this.props.amount * this.props.conversionRate).toFixed(2);
     }
 
     return (
-      <Container backgroundColor={primaryColor}>
-        <StatusBar backgroundColor="blue" barStyle="light-content" />
+      <Container backgroundColor={this.props.primaryColor}>
+        <StatusBar barStyle="light-content" />
         <Header onPress={this.handleOptionsPress} />
         <KeyboardAvoidingView behavior="padding">
-          <Logo tintColor={primaryColor} />
+          <Logo tintColor={this.props.primaryColor} />
           <InputWithButton
-            buttonText={baseCurrency}
+            buttonText={this.props.baseCurrency}
             onPress={this.handlePressBaseCurrency}
-            defaultValue={amount.toString()}
+            defaultValue={this.props.amount.toString()}
             keyboardType="numeric"
             onChangeText={this.handleChangeText}
-            textColor={primaryColor}
+            textColor={this.props.primaryColor}
           />
           <InputWithButton
             editable={false}
-            buttonText={quoteCurrency}
+            buttonText={this.props.quoteCurrency}
             onPress={this.handlePressQuoteCurrency}
             value={quotePrice}
-            textColor={primaryColor}
+            textColor={this.props.primaryColor}
           />
           <LastConverted
-            date={lastConvertedDate}
-            base={baseCurrency}
-            quote={quoteCurrency}
-            conversionRate={conversionRate}
+            date={this.props.lastConvertedDate}
+            base={this.props.baseCurrency}
+            quote={this.props.quoteCurrency}
+            conversionRate={this.props.conversionRate}
           />
           <ClearButton onPress={this.handleSwapCurrency} text="Reverse Currencies" />
         </KeyboardAvoidingView>
@@ -130,4 +116,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(connectAlert(Home));
+const ConnectedHome = connect(mapStateToProps)(Home);
+
+export default props => (
+  <AlertConsumer>
+    {context => <ConnectedHome alertWithType={context.alertWithType} {...props} />}
+  </AlertConsumer>
+);
