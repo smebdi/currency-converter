@@ -1,14 +1,5 @@
-## Prerequisites
-
-To run this application you'll need to be able to run a "pure" React Native application. If you haven't already please visit the [Getting Started guide](https://facebook.github.io/react-native/docs/getting-started.html) for React Native, click "Building Projects with Native Code", and configure your development environment. Once you've done that you're set!
-
-## Installation
-
-Run the following commands from your terminal:
-
-* `git clone https://github.com/HandlebarLabs/production-ready-react-native.git`
-* `cd production-ready-react-native`
-* `npm install`
+# Currency Converter
+This app was built with React Native, originally leveraging expo, now converted to pure react native.
 
 ## Running
 
