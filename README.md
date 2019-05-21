@@ -19,16 +19,16 @@ Run the following commands from your terminal:
 
 ### Common Issues
 
-_Package com.packagename signatures do not match the previously installed version; ignoring!_  
+*Package com.packagename signatures do not match the previously installed version; ignoring!*  
 To resolve, use `adb uninstall com.packagename`
 
-_com.android.builder.testing.api.DeviceException: No connected devices!_  
+*com.android.builder.testing.api.DeviceException: No connected devices!*  
 To resolve, make sure your device is connected to your computer.  
 Also ensure that the connection type isn't just set to charging. It must be set to transfer files.  
 This may require development settings adjustment and varies for each phone.  
 Use `adb devices` to check if your device is recognized.
 
-_Unable to delete directory ..._
+*Unable to delete directory ...*  
 Typically seen with Android. Delete the `android/app/build` folder and run `react-native run-android` again.
 
 ### Networking
