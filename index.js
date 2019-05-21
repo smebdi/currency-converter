@@ -1,5 +1,6 @@
-import App from './App';
-import { registerRootComponent } from 'expo';
+import { AppRegistry, YellowBox } from 'react-native';
+import App from './App/index';
 
-registerRootComponent(App);
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
+AppRegistry.registerComponent('CurrencyConverter', () => App);

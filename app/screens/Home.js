@@ -20,14 +20,15 @@ class Home extends Component {
     this.props.dispatch(getInitialConversion());
   }
 
+  componentDidMount() {
+    console.log('component mounted');
+    NetInfo.addEventListener('connectionChange', this.handleNetworkChange);
+  }
+
   componentDidUpdate() {
     if (this.props.currencyError) {
       this.props.alertWithType('error', 'Error', this.props.currencyError);
     }
-  }
-
-  componentDidMount() {
-    NetInfo.addEventListener('connectionChange', this.handleNetworkChange);
   }
 
   componentWillUnmount() {
@@ -35,9 +36,9 @@ class Home extends Component {
   }
 
   handleNetworkChange = (info) => {
-    console.log(info)
-    this.props.dispatch(changeNetworkStatus(info.type))
-  }
+    this.props.dispatch(changeNetworkStatus(info.type));
+    this.props.dispatch(getInitialConversion());
+  };
 
   handleChangeText = (text) => {
     this.props.dispatch(changeCurrencyAmount(text));
@@ -59,6 +60,14 @@ class Home extends Component {
     this.props.navigation.navigate('Options');
   };
 
+  handleDisconnectedPress = () => {
+    this.props.alertWithType(
+      'error',
+      'Not connected to the internet!',
+      "Just a heads up that you're not connected to the internet - some features may not work.",
+    );
+  };
+
   render() {
     let quotePrice = '...';
     if (!this.props.isFetching) {
@@ -68,7 +77,11 @@ class Home extends Component {
     return (
       <Container backgroundColor={this.props.primaryColor}>
         <StatusBar barStyle="light-content" />
-        <Header onPress={this.handleOptionsPress} />
+        <Header
+          onPress={this.handleOptionsPress}
+          isConnected={this.props.isConnected}
+          onWarningPress={this.handleDisconnectedPress}
+        />
         <KeyboardAvoidingView behavior="padding">
           <Logo tintColor={this.props.primaryColor} />
           <InputWithButton
@@ -113,6 +126,7 @@ const mapStateToProps = (state) => {
     isFetching: conversionSelector.isFetching,
     primaryColor: state.theme.primaryColor,
     currencyError: state.currencies.error,
+    isConnected: state.network.connected,
   };
 };
 
