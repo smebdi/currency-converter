@@ -1,5 +1,6 @@
 import { takeEvery, call, put, select } from 'redux-saga/effects';
 import { delay } from 'redux-saga';
+import { initialState as networkInitialState } from '../reducers/network';
 
 import {
   CHANGE_BASE_CURRENCY,
@@ -18,7 +19,7 @@ const requestTimeout = (time, promise) =>
 export const getLatestRate = currency =>
   requestTimeout(2000, fetch(`https://fixer.handlebarlabs.com/latest?base=${currency}`));
 
-const fetchLatestConversionRates = function* ({ currency }) {
+export const fetchLatestConversionRates = function* ({ currency }) {
   const { connected, hasCheckedStatus } = yield select(state => state.network);
   if (!connected && hasCheckedStatus) {
     yield put({

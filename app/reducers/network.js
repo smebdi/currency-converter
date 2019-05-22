@@ -1,6 +1,6 @@
 import { CHANGE_CONNECTION_STATUS } from '../actions/network';
 
-const initialState = {
+export const initialState = {
   connected: true,
   hasCheckedStatus: false,
 };
