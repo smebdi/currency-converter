@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/es/integration/react';
+import SplashScreen from 'react-native-splash-screen';
 
 import Navigator from './config/routes';
 import { AlertProvider } from './components/Alert';
@@ -15,6 +16,10 @@ export default class extends React.Component {
       store,
       persistor,
     };
+  }
+
+  componentDidMount() {
+    SplashScreen.hide();
   }
 
   render() {

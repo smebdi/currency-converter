@@ -1,9 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-26:12
-INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-26:12
-INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-26:12
-INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-26:12
+ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-34:12
+INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-34:12
+INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-34:12
+INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-34:12
+MERGED from [:react-native-splash-screen] C:\Users\calebdavenport\Code\currency-converter\node_modules\react-native-splash-screen\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-14:12
 MERGED from [com.facebook.react:react-native:0.57.8] C:\Users\calebdavenport\.gradle\caches\transforms-1\files-1.1\react-native-0.57.8.aar\6d152bb0fd1443d032dadeced5d12384\AndroidManifest.xml:2:1-15:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\calebdavenport\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\530cf389a55e7a9d7042c5926fa9afa6\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\calebdavenport\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\369b3d4120da9f0832acddf7fa4ef14e\AndroidManifest.xml:17:1-22:12
@@ -24,20 +25,20 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\calebdavenport\.gr
 MERGED from [com.facebook.fresco:fbcore:1.10.0] C:\Users\calebdavenport\.gradle\caches\transforms-1\files-1.1\fbcore-1.10.0.aar\93cf531a868a13acf170d9f3d66dff8a\AndroidManifest.xml:2:1-9:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\calebdavenport\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b55cbd4fbb825da8d79082b0b8884baf\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\calebdavenport\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\05c2feb1d2fd3336931aca0cfe742404\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-26:12
-INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-26:12
-INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-26:12
+INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-34:12
+INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-34:12
+INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-34:12
 	package
-		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:2:5-36
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:2:5-40
 		INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-26:12
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-34:12
 		INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-26:12
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-34:12
 		INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:11-69
@@ -52,7 +53,9 @@ MERGED from [com.facebook.react:react-native:0.57.8] C:\Users\calebdavenport\.gr
 	android:name
 		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:5:22-75
 application
-ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:7:5-24:19
+ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:7:5-32:19
+MERGED from [:react-native-splash-screen] C:\Users\calebdavenport\Code\currency-converter\node_modules\react-native-splash-screen\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:11:5-12:19
+MERGED from [:react-native-splash-screen] C:\Users\calebdavenport\Code\currency-converter\node_modules\react-native-splash-screen\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:11:5-12:19
 MERGED from [com.facebook.react:react-native:0.57.8] C:\Users\calebdavenport\.gradle\caches\transforms-1\files-1.1\react-native-0.57.8.aar\6d152bb0fd1443d032dadeced5d12384\AndroidManifest.xml:13:5-20
 MERGED from [com.facebook.react:react-native:0.57.8] C:\Users\calebdavenport\.gradle\caches\transforms-1\files-1.1\react-native-0.57.8.aar\6d152bb0fd1443d032dadeced5d12384\AndroidManifest.xml:13:5-20
 MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\calebdavenport\.gradle\caches\transforms-1\files-1.1\soloader-0.5.1.aar\b397f05429aa063f44dbf8cf05361e97\AndroidManifest.xml:11:5-20
@@ -69,34 +72,50 @@ MERGED from [org.webkit:android-jsc:r174650] C:\Users\calebdavenport\.gradle\cac
 		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:12:7-38
 	android:name
 		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:8:7-38
-activity#com.currencyconverter.MainActivity
-ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:13:7-22:18
+activity#com.cmd.currencyconverter.SplashActivity
+ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:13:9-22:20
 	android:label
-		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:15:9-41
-	android:windowSoftInputMode
-		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:17:9-51
-	android:configChanges
-		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:16:9-79
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:16:13-45
+	android:exported
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:17:13-36
+	android:theme
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:15:13-47
 	android:name
-		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:14:9-37
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:14:13-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:18:9-21:25
+ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:18:13-21:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:19:13-65
+ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:19:21-62
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:20:13-73
+ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:20:23-70
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:20:27-74
+activity#com.cmd.currencyconverter.MainActivity
+ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:24:7-30:35
+	android:screenOrientation
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:29:9-45
+	android:label
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:26:9-41
+	android:windowSoftInputMode
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:28:9-51
+	android:exported
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:30:9-32
+	android:configChanges
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:27:9-79
+	android:name
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:25:9-37
 activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:23:7-84
+ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:31:7-84
 	android:name
-		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:23:17-81
+		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:31:17-81
 uses-sdk
 INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml
+MERGED from [:react-native-splash-screen] C:\Users\calebdavenport\Code\currency-converter\node_modules\react-native-splash-screen\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-splash-screen] C:\Users\calebdavenport\Code\currency-converter\node_modules\react-native-splash-screen\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.57.8] C:\Users\calebdavenport\.gradle\caches\transforms-1\files-1.1\react-native-0.57.8.aar\6d152bb0fd1443d032dadeced5d12384\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.57.8] C:\Users\calebdavenport\.gradle\caches\transforms-1\files-1.1\react-native-0.57.8.aar\6d152bb0fd1443d032dadeced5d12384\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\calebdavenport\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\530cf389a55e7a9d7042c5926fa9afa6\AndroidManifest.xml:20:5-44
@@ -146,8 +165,8 @@ INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\ma
 		ADDED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-IMPLIED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+IMPLIED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-34:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+IMPLIED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-34:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
+IMPLIED from C:\Users\calebdavenport\Code\currency-converter\android\app\src\main\AndroidManifest.xml:1:1-34:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE

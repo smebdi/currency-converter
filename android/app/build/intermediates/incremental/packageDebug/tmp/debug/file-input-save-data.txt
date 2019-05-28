@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue May 21 15:24:39 CDT 2019
+#Thu May 23 12:05:44 CDT 2019
 17.baseType=DIRECTORY
 4.path=lib/armeabi-v7a/libfolly_json.so
 25.base=C\:\\Users\\calebdavenport\\Code\\currency-converter\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0

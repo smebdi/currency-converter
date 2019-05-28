@@ -1,4 +1,4 @@
-#Tue May 21 15:24:38 CDT 2019
+#Tue May 28 10:26:30 CDT 2019
 base.0=C\:\\Users\\calebdavenport\\Code\\currency-converter\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

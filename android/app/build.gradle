@@ -98,13 +98,23 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.currencyconverter"
+        applicationId "com.cmd.currencyconverter"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"
+        }
+    }
+    signingConfigs {
+        release {
+            if (project.hasProperty('CURRENCY_RELEASE_STORE_FILE')) {
+                storeFile file(CURRENCY_RELEASE_STORE_FILE)
+                storePassword CURRENCY_RELEASE_STORE_PASSWORD
+                keyAlias CURRENCY_RELEASE_KEY_ALIAS
+                keyPassword CURRENCY_RELEASE_KEY_PASSWORD
+            }
         }
     }
     splits {
@@ -117,6 +127,7 @@ android {
     }
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
@@ -137,6 +148,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-splash-screen')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
