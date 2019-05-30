@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for App/config/sagas.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">App/config</a> sagas.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/31</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/17</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { takeEvery, call, put, select } from 'redux-saga/effects';</span>
+<span class="cstat-no" title="statement not covered" >import { delay } from 'redux-saga';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >import {</span>
+  CHANGE_BASE_CURRENCY,
+  GET_INITIAL_CONVERSION,
+  SWAP_CURRENCY,
+  CONVERSION_RESULT,
+  CONVERSION_ERROR,
+} from '../actions/currencies';
+&nbsp;
+const <span class="fstat-no" title="function not covered" >requestTimeout = <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >(</span>time, promise) =&gt;</span></span>
+  new Promise(<span class="fstat-no" title="function not covered" >(</span>resolve, reject) =&gt; {
+<span class="cstat-no" title="statement not covered" >    setTimeout(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =&gt; reject(new Error('Request timed out.')), time);</span></span></span>
+<span class="cstat-no" title="statement not covered" >    promise.then(resolve, reject);</span>
+  });
+&nbsp;
+export const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >getLatestRate = <span class="cstat-no" title="statement not covered" >c</span>urrency =&gt;</span></span>
+  requestTimeout(2000, fetch(`https://fixer.handlebarlabs.com/latest?base=${currency}`));
+&nbsp;
+const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >fetchLatestConversionRates = <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >f</span>unction* ({ currency }) {</span></span></span></span>
+  const { <span class="cstat-no" title="statement not covered" >connected, <span class="cstat-no" title="statement not covered" >hasCheckedStatus } = yield select(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >state =&gt; state.network);</span></span></span></span>
+  if (!connected &amp;&amp; hasCheckedStatus) {
+    yield put({
+      type: CONVERSION_ERROR,
+      error: 'Not connected to the internet. Conversion rate may be outdated or unavailable!',
+    });
+    return;
+  }
+  
+  try {
+    let <span class="cstat-no" title="statement not covered" >usedCurrency = currency;</span>
+    if (usedCurrency === undefined) {
+<span class="cstat-no" title="statement not covered" >      usedCurrency = yield select(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >state =&gt; state.currencies.baseCurrency);</span></span></span>
+    }
+    const <span class="cstat-no" title="statement not covered" >response = yield call(getLatestRate, usedCurrency);</span>
+    const <span class="cstat-no" title="statement not covered" >result = yield response.json();</span>
+    if (result.error) {
+      yield put({ type: CONVERSION_ERROR, error: result.error });
+    } else {
+      yield put({ type: CONVERSION_RESULT, result });
+    }
+  } catch (error) {
+    yield put({ type: CONVERSION_ERROR, error: error.message });
+  }
+};
+&nbsp;
+const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >clearConversionError = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >f</span>unction* () {</span></span></span>
+  const <span class="cstat-no" title="statement not covered" >DELAY_SECONDS = 4;</span>
+  const <span class="cstat-no" title="statement not covered" >error = yield select(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >state =&gt; state.currencies.error);</span></span></span>
+  if (error) {
+    yield delay(DELAY_SECONDS * 1000);
+    yield put({ type: CONVERSION_ERROR , error: null })
+  }
+}
+&nbsp;
+const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >rootSaga = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >f</span>unction* () {</span></span></span>
+  yield takeEvery(GET_INITIAL_CONVERSION, fetchLatestConversionRates);
+  yield takeEvery(CHANGE_BASE_CURRENCY, fetchLatestConversionRates);
+  yield takeEvery(SWAP_CURRENCY, fetchLatestConversionRates);
+  yield takeEvery(CONVERSION_ERROR, clearConversionError);
+};
+&nbsp;
+export default rootSaga;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue May 21 2019 16:43:34 GMT-0500 (Central Daylight Time)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for App/actions/currencies.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">App/actions</a> currencies.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/12</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const <span class="cstat-no" title="statement not covered" >CHANGE_CURRENCY_AMOUNT = 'CHANGE_CURRENCY_AMOUNT';</span>
+export const <span class="cstat-no" title="statement not covered" >SWAP_CURRENCY = 'SWAP_CURRENCY';</span>
+export const <span class="cstat-no" title="statement not covered" >CHANGE_BASE_CURRENCY = 'CHANGE_BASE_CURRENCY';</span>
+export const <span class="cstat-no" title="statement not covered" >CHANGE_QUOTE_CURRENCY = 'CHANGE_QUOTE_CURRENCY';</span>
+export const <span class="cstat-no" title="statement not covered" >GET_INITIAL_CONVERSION = 'GET_INITIAL_CONVERSION';</span>
+&nbsp;
+export const <span class="cstat-no" title="statement not covered" >CONVERSION_RESULT = 'CONVERSION_RESULT';</span>
+export const <span class="cstat-no" title="statement not covered" >CONVERSION_ERROR = 'CONVERSION_ERROR';</span>
+&nbsp;
+export const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >getInitialConversion = <span class="cstat-no" title="statement not covered" >(</span>) =&gt; ({</span></span>
+  type: GET_INITIAL_CONVERSION,
+});
+&nbsp;
+export const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >changeCurrencyAmount = <span class="cstat-no" title="statement not covered" >a</span>mount =&gt; ({</span></span>
+  type: CHANGE_CURRENCY_AMOUNT,
+  amount: parseFloat(amount),
+});
+&nbsp;
+export const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >swapCurrency = <span class="cstat-no" title="statement not covered" >(</span>) =&gt; ({</span></span>
+  type: SWAP_CURRENCY,
+});
+&nbsp;
+export const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >changeBaseCurrency = <span class="cstat-no" title="statement not covered" >c</span>urrency =&gt; ({</span></span>
+  type: CHANGE_BASE_CURRENCY,
+  currency,
+});
+&nbsp;
+export const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >changeQuoteCurrency = <span class="cstat-no" title="statement not covered" >c</span>urrency =&gt; ({</span></span>
+  type: CHANGE_QUOTE_CURRENCY,
+  currency,
+});
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue May 21 2019 16:43:34 GMT-0500 (Central Daylight Time)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>
